@@ -1,0 +1,163 @@
+{
+  "collected_at": "2025-12-19T21:22:13.280897Z",
+  "emotions": [
+    "embarrassment",
+    "guilt",
+    "jealousy",
+    "pride"
+  ],
+  "seed": null,
+  "max_queries_per_emotion": 200,
+  "max_queries_cap": 200,
+  "max_scrolls_cap": 15,
+  "min_scroll_novelty": 0.1,
+  "scroll_novelty_patience": 2,
+  "min_new_videos_per_query": 10,
+  "query_patience": 3,
+  "stats": {
+    "embarrassment": {
+      "videos": 29161,
+      "duplicates_removed": 13209,
+      "queries_planned": 147,
+      "queries_executed": 147,
+      "query_stop_reason": "exhausted_queries",
+      "retrieval": {
+        "query_counts_by_mode": {
+          "emotion_plus_anchor": 147
+        },
+        "query_counts_by_anchor_type": {
+          "media": 35,
+          "interaction": 28,
+          "game": 42,
+          "situation": 42
+        },
+        "video_counts_by_mode": {
+          "emotion_plus_anchor": 29161
+        },
+        "video_counts_by_anchor_type": {
+          "game": 8894,
+          "media": 7719,
+          "interaction": 5770,
+          "situation": 9902
+        },
+        "provenance_counts_by_mode": {
+          "emotion_plus_anchor": 42370
+        },
+        "provenance_counts_by_anchor_type": {
+          "media": 10032,
+          "interaction": 7970,
+          "game": 12018,
+          "situation": 12350
+        }
+      }
+    },
+    "guilt": {
+      "videos": 17632,
+      "duplicates_removed": 10091,
+      "queries_planned": 133,
+      "queries_executed": 111,
+      "query_stop_reason": "low_marginal_gain",
+      "retrieval": {
+        "query_counts_by_mode": {
+          "emotion_plus_anchor": 111
+        },
+        "query_counts_by_anchor_type": {
+          "game": 33,
+          "media": 23,
+          "situation": 31,
+          "interaction": 24
+        },
+        "video_counts_by_mode": {
+          "emotion_plus_anchor": 17632
+        },
+        "video_counts_by_anchor_type": {
+          "game": 5814,
+          "interaction": 3843,
+          "media": 5059,
+          "situation": 5253
+        },
+        "provenance_counts_by_mode": {
+          "emotion_plus_anchor": 27723
+        },
+        "provenance_counts_by_anchor_type": {
+          "game": 8355,
+          "interaction": 5942,
+          "media": 6299,
+          "situation": 7127
+        }
+      }
+    },
+    "jealousy": {
+      "videos": 11878,
+      "duplicates_removed": 16182,
+      "queries_planned": 131,
+      "queries_executed": 121,
+      "query_stop_reason": "low_marginal_gain",
+      "retrieval": {
+        "query_counts_by_mode": {
+          "emotion_plus_anchor": 121
+        },
+        "query_counts_by_anchor_type": {
+          "media": 30,
+          "situation": 32,
+          "game": 35,
+          "interaction": 24
+        },
+        "video_counts_by_mode": {
+          "emotion_plus_anchor": 11878
+        },
+        "video_counts_by_anchor_type": {
+          "media": 4038,
+          "situation": 3706,
+          "interaction": 2848,
+          "game": 3716
+        },
+        "provenance_counts_by_mode": {
+          "emotion_plus_anchor": 28060
+        },
+        "provenance_counts_by_anchor_type": {
+          "media": 7473,
+          "situation": 7453,
+          "interaction": 5577,
+          "game": 7557
+        }
+      }
+    },
+    "pride": {
+      "videos": 24134,
+      "duplicates_removed": 11151,
+      "queries_planned": 114,
+      "queries_executed": 114,
+      "query_stop_reason": "exhausted_queries",
+      "retrieval": {
+        "query_counts_by_mode": {
+          "emotion_plus_anchor": 114
+        },
+        "query_counts_by_anchor_type": {
+          "media": 25,
+          "game": 30,
+          "situation": 30,
+          "interaction": 29
+        },
+        "video_counts_by_mode": {
+          "emotion_plus_anchor": 24134
+        },
+        "video_counts_by_anchor_type": {
+          "media": 6425,
+          "interaction": 6856,
+          "situation": 7319,
+          "game": 6753
+        },
+        "provenance_counts_by_mode": {
+          "emotion_plus_anchor": 35285
+        },
+        "provenance_counts_by_anchor_type": {
+          "media": 7844,
+          "interaction": 9067,
+          "situation": 9323,
+          "game": 9051
+        }
+      }
+    }
+  }
+}
