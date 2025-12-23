@@ -53,6 +53,7 @@ import hashlib
 import json
 import logging
 import pathlib
+import random
 import re
 import shlex
 import shutil
@@ -65,7 +66,7 @@ from typing import Dict, Iterator, List, Optional, Sequence, Tuple
 # -----------------------------
 
 NUM_CLIPS = 3
-CLIP_DURATION_SEC = 20
+CLIP_DURATION_SEC = 5
 USE_AUDIO_IN_VIDEO = True
 
 # Downsample clips before sending to the model to avoid extremely long multimodal token sequences.
@@ -492,8 +493,13 @@ def extract_video_clips(
     ensure_dir(clips_dir)
     duration = probe_duration_sec(video_path)
     starts = compute_clip_starts(duration)
+
+    # Randomly choose a single clip (e.g., start/mid/end) each time.
+    # This reduces multimodal input length and keeps inference light.
+    if len(starts) > 1:
+        starts = [random.choice(starts)]
     clips: List[pathlib.Path] = []
-    for idx, start in enumerate(starts[:NUM_CLIPS]):
+    for idx, start in enumerate(starts[:1]):
         clip_path = clips_dir / f"clip_{idx}.mp4"
         try:
             clips.append(
@@ -918,7 +924,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--target_emotions", type=str, default="embarrassment")
     parser.add_argument(
         "--device",
-        choices=["cuda", "cpu"],
+        choices=["cuda", ],
         default="cuda",
         help="Device for inference (default: cuda).",
     )
