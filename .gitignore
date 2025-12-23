@@ -1,5 +1,3 @@
 *.pyc
 tmp*
 kept_videos/
-cookies.txt
-www.youtube.com_cookies.txt
