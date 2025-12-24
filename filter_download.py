@@ -929,7 +929,7 @@ def parse_args() -> argparse.Namespace:
         help="Device for inference (default: cuda).",
     )
     parser.add_argument("--min_duration_sec", type=int, default=0)
-    parser.add_argument("--max_duration_sec", type=int, default=180)
+    parser.add_argument("--max_duration_sec", type=int, default=600)
     parser.add_argument("--force_redownload", action="store_true")
     parser.add_argument(
         "--yt_cookies",
